@@ -1,0 +1,315 @@
+/* Asi son los comentarios en CSS */
+/*
+selector {
+    propiedad valor;
+} 
+
+ */
+
+/* "*" Es para realizar reset */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1f4c4c;
+    color: #f7c34b;
+}
+
+.encabeza {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.20);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.name {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #f7c34b;
+    font-weight: 700;
+}
+
+/* me quita los puntos de lista */
+.nav ul {
+    list-style: none;
+}
+
+/* Aqui me da la direccion de barra */
+.encabeza .nav ul li {
+    float: left;
+    position: relative
+}
+
+.encabeza .nav ul li a {
+    font-size: 1.5em;
+    color: #f7c34b;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;            /* REALICE CAMBIO PARA MOBILE  ERA BLOCK */
+    transition: all .2s ease;
+}
+
+.encabeza .nav ul li a:hover {
+    background-color: #1f4c4c;
+}
+
+.encabeza .nav ul li ul {
+   position: absolute;
+   right: 0;
+   width: 300px;
+   background-color: rgba(255, 255, 255, 0.20);
+   display: none;
+}
+
+/* Tamaño segunda categoria */
+.encabeza .nav ul li ul li a {
+    font-size: 1rem;
+    text-transform: capitalize;
+} 
+
+.encabeza .nav ul li ul li {
+    width: 100%;
+}
+
+.encabeza .nav ul li:hover > ul {
+    display: initial;
+}
+
+.text-tittle {
+    justify-content: center;
+    margin: 18rem 1rem 1rem 1rem;
+    padding: 1rem;
+    display: flex;
+    font-size: 4rem;
+}
+
+.text-1 {
+    margin: 1rem 25rem 3rem 25rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* imagenes y videos */
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 20px;
+}
+
+.alinear {
+    margin: 0 15px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 20px;
+}
+
+/* Category */
+
+.containercategoria {
+/*     display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000xp;
+    margin: auto; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 35px;
+    justify-items: center;
+}
+
+.imgcc {
+    width: 600px;
+    height: 500px;
+    margin-bottom: 30px;
+    object-fit: cover; /* Ajusta la imagen cuando tienen diferentes tamnaños */
+ }
+
+/* Social Media */
+
+.alinearsm {
+    margin: 0 15px;
+}
+
+.containersm {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.text-tittle-base {
+    justify-content: center;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
+    display: flex;
+    font-size: 3rem;
+}
+
+
+/* About us */
+
+.containera {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.htres {
+    font-size: 3rem;
+    text-align: justify;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.bloa1 {
+	width: 600px;
+	padding: 2rem 0;
+	margin: 0rem;
+}
+
+.bloa2 {
+	width: 600px;
+	padding: 2rem 0;
+	margin: 0rem;
+}
+
+
+/* Contacto */
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
+}
+
+.containermap {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.text-tittlect {
+    justify-content: center;
+    margin: 18rem 0 0 0 ;
+    padding: 0rem;
+    border: 0rem;
+    display: flex;
+    font-size: 3rem;
+}
+
+
+/* MEDIAS QUERIES */
+
+/* TABLETA */
+@media only screen and (max-width: 768px){}
+
+
+
+/* MOBILE */
+
+        /* INICIO */
+@media only screen and (max-width: 576px){
+
+.encabeza {
+    flex-direction: column;
+}
+
+.text-1 {
+    margin: auto;
+}
+
+.nav {
+    display: block;
+}
+
+.text-tittle {
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.container2 {
+    flex-direction: columns;
+}
+
+        /* CATEGORIAS */
+
+.containercategoria {
+    grid-template-columns: 1fr;
+}
+
+.imgcc {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 30px;
+    object-fit: cover; /* Ajusta la imagen cuando tienen diferentes tamnaños */
+ }
+
+         /* NOSOTROS */
+
+.containera {
+    flex-direction: column;
+}
+
+.htres {
+    text-align: center;
+}
+
+.bloa1 {
+    width: auto;
+    text-align: center;
+}
+
+.bloa2 {
+    width: auto;
+    margin: 2rem;
+}
+
+         /* CONTACTO */
+
+.text-tittle {
+    flex-direction: column;
+    text-align: center;
+}image.png
+         /* SOCIAL MEDIA */
+
+
+
+
+
+
+
+}
